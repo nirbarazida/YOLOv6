@@ -35,7 +35,9 @@ def inference():
         if res is not None:
             st.image(res, caption='YOLOv6 Inference')
         else:
-            st.write('Invalid Image!')
+            st.write('No objects inferred!')
+    else:
+        st.write('Invalid Image!')
 
 def main():
     st.set_page_config(page_title='YOLOv6 Playground', page_icon=os.path.join('assets', 'favicon.ico'), layout='wide')
